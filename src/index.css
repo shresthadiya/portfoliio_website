@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #f5eedd;
+  --color-foreground: #84b3ce;
+
+  --color-card: #141alf;
+
+  --color-primary: #16587b;
+  --color-primary-foreground: #f0ebd8;
+
+  --color-secondary: #1d2d44;
+  --color-secondary-foreground: #748cab;
+
+  --color-muted: #1d2d44;
+  --color-muted-foreground: #16587b;
+
+  --color-border: #ffffff;
+
+  --radius: 0.75rem;
+
+  --color-highlight: #f5a623;
+  --color-surface: #84b3ce;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: "Inter", sans-serif;
+  }
+
+  .font-serif {
+    font-family: "Playfair Display", serif;
+  }
+}
+
+@layer components {
+  .glass {
+    background-color: color-mix(in srgb, var(--color-surface) 50%, transparent);
+    backdrop-filter: blur(16px);
+    border: 1px solid color-mix(in srgb, var(--color-surface) 50%, transparent);
+  }
+}
+
+@layer utilities {
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+      filter: blur(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+  }
+  
+  @keyframes slow-drift {
+    0%,
+    100% {
+      transform: translate(0,0);
+    }
+    25% {
+      transform: translate(20px, -30px);
+    }
+    50% {
+      transform: translate(-15px, -20px);
+    }
+    75% {
+      transform: translate(30px, 10px);
+    }
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out both;
+  }
+
+}
