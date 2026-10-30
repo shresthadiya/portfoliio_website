@@ -1,3 +1,3 @@
 export const Activities = () => {
-    return (<section></section>);
+  return <section></section>;
 };
