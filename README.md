@@ -9,8 +9,8 @@ A personal portfolio website showcasing my projects, skills, contact and experie
 - HTML5 Canvas: animated wave background in the hero section
 
 # Color Palette
--Cream: `#f5eedd`
--Sky Blue: `#84b3ce`
--Deep Blue: `#16587b`
+- Cream: `#f5eedd`
+- Sky Blue: `#84b3ce`
+- Deep Blue: `#16587b`
 
 
